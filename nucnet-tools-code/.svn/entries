@@ -1,0 +1,77 @@
+10
+
+dir
+512
+svn://svn.code.sf.net/p/nucnet-tools/code/trunk
+svn://svn.code.sf.net/p/nucnet-tools/code
+
+
+
+2016-08-31T22:07:25.330230Z
+512
+mbradle
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+38214ec2-7e89-4b82-ab6d-44f240af367c
+
+build
+dir
+
+nnt
+dir
+
+Doxyfile
+file
+
+
+
+
+2016-09-25T19:14:08.000000Z
+5377cd4835dd236c41ab3f047dff49b3
+2016-02-17T14:59:08.983987Z
+431
+mbradle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+74346
+
+doc
+dir
+
+examples
+dir
+
+user
+dir
+

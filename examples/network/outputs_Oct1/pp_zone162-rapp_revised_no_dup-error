@@ -1,0 +1,2 @@
+Species: n
+ERROR: Can't assign initial mass fraction--species not present in ../nucnet-tools-code/vendor/libnucnet/0.28/src/Libnucnet.c on line 419

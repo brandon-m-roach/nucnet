@@ -1,0 +1,20 @@
+K 10
+svn:ignore
+V 160
+run_multiple_zone_omp
+run_entropy
+run_single_zone
+run_constant_entropy
+run_energy_generation
+out*
+output
+hydro.cpp
+hydro.h
+*.xml
+*.exe
+*.dSYM
+*.txt
+*.png
+*.pro
+
+END

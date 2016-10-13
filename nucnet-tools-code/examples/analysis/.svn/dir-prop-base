@@ -1,0 +1,32 @@
+K 10
+svn:ignore
+V 543
+*.txt
+*.png
+*.exe
+*.dSYM
+compute_flows
+print_muh
+print_properties
+print_ye
+print_mass_fractions_in_zones
+compute_abundance_moment_in_zones
+compute_thermo_quantity
+print_abundances_for_element
+compute_quantity
+compute_decayed_abundances
+print_abundances_vs_nucleon_number
+print_zone_abundances
+print_zone_properties
+compare_equil
+print_largest_mass_fractions_in_zones
+print_wse_abundances_in_zones
+compute_sound_speed
+compute_species_flows
+compute_zone_mu
+compute_Ycdot
+print_species_currents
+compare_nucleon_equil
+compute_nucleon_number_flows
+
+END

@@ -1,0 +1,38 @@
+Running network calculations with a flag: normal
+Start time: 08.31.16_19:38:00
+Running zone 158
+./run_single_zone pp_reaclib_full.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory158 outputs/pp_zone158-normal.xml
+Running zone 159
+./run_single_zone pp_reaclib_full.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory159 outputs/pp_zone159-normal.xml
+Step finished at: 08.31.16_21:59:10
+Running zone 160
+./run_single_zone pp_reaclib_full.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory160 outputs/pp_zone160-normal.xml
+Running zone 161
+./run_single_zone pp_reaclib_full.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory161 outputs/pp_zone161-normal.xml
+Step finished at: 09.01.16_00:12:03
+Running zone 162
+./run_single_zone pp_reaclib_full.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory162 outputs/pp_zone162-normal.xml
+Running zone 163
+./run_single_zone pp_reaclib_full.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory163 outputs/pp_zone163-normal.xml
+Step finished at: 09.01.16_02:45:31
+Running zone 164
+./run_single_zone pp_reaclib_full.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory164 outputs/pp_zone164-normal.xml
+Running zone 165
+./run_single_zone pp_reaclib_full.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory165 outputs/pp_zone165-normal.xml
+Step finished at: 09.01.16_05:07:42
+Running zone 166
+./run_single_zone pp_reaclib_full.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory166 outputs/pp_zone166-normal.xml
+Running zone 167
+./run_single_zone pp_reaclib_full.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory167 outputs/pp_zone167-normal.xml
+Step finished at: 09.01.16_06:54:54
+Running zone 168
+./run_single_zone pp_reaclib_full.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory168 outputs/pp_zone168-normal.xml
+Running zone 169
+./run_single_zone pp_reaclib_full.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory169 outputs/pp_zone169-normal.xml
+Step finished at: 09.01.16_08:23:51
+Running zone 170
+./run_single_zone pp_reaclib_full.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory170 outputs/pp_zone170-normal.xml
+Running zone 171
+./run_single_zone pp_reaclib_full.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory171 outputs/pp_zone171-normal.xml
+Step finished at: 09.01.16_09:39:44
+Calculations finished at: 09.01.16_09:39:44

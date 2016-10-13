@@ -1,0 +1,187 @@
+//---------------------------------------------------------
+//
+// This is a code that extracts the p nuclei from the final steps
+// of the calculations, runs a post-calc beta-decay to get the final p nuclei
+// mass fractions and saves the data in separate file for each zone.
+//
+//---------------------------------------------------------
+
+#include <iostream>
+#include <fstream>
+#include <stdlib.h>
+#include <stdint.h>
+#include <string.h>
+#include <stdio.h>
+
+using namespace std;
+
+int main()
+{
+
+int nuc_z, nuc_a;
+double nuc_x, nuc_dx;
+double MassFrac1[85][211], MassFrac2[85][211], wMassFrac[85][211];
+double PnuclMF[85][211]={0};
+int Pnucl[85][211];
+//star properties from Rapp et al. Astrophys. J 653 (2006) 474
+double LayerM[14]={1.9336, 1.9658, 2.0085, 2.0508, 2.1037, 2.1564, 2.2090, 2.2614, 2.3136, 2.3655, 2.4171, 2.4684, 2.5249, 2.5825};
+double StarMass;
+string line;
+char name[8];
+int zone;
+char inPath1[200], inPath2[200], inPath3[200], outPath1[200], outPath2[200];
+fstream filein1, filein2, filein3, fileout1, fileout2;
+
+//--------------------------------------------------------------------------------get the total mass of all simulated star layers
+
+StarMass = LayerM[13]-LayerM[0];
+
+
+sprintf(inPath3, "../pprocess/output_rapp/p_nuclei.dat");
+filein3.open(inPath3, fstream::in);
+if(!filein3){
+	cout<<"Error opening input file3"<<endl;
+	return -1;
+}
+
+	while(!filein3.eof()){
+		filein3 >> name >> nuc_z >> nuc_a;
+		Pnucl[nuc_z][nuc_a]=1;
+	}
+	cout << "Loaded list of p-nuclei" << endl;
+
+//ouput file
+sprintf(outPath2, "../pprocess/output_rapp/pnucl_in_layers.dat");
+fileout2.open(outPath2, fstream::out  | fstream::trunc);
+if(!fileout2){
+	cout<<"Error opening output file1"<<endl;
+	return -1;
+}
+
+//------------------------------------------------------------------------------------------------------loop over all input files
+for(zone=0; zone<13; zone++){
+
+	//zero the MassFrac arrays
+	for (int i=0; i<85; i++){
+		for(int j=0;j<211;j++){
+			MassFrac1[i][j]=0;
+			MassFrac2[i][j]=0;
+			wMassFrac[i][j]=0;
+			PnuclMF[i][j]=0;
+		}
+	}
+
+	//input files
+	sprintf(inPath1, "../pprocess/output_rapp/pp_%i-last.dat", zone+158);
+	filein1.open(inPath1, fstream::in);
+	if(!filein1){
+		cout<<"Error opening input file1"<<endl;
+		return -1;
+	}
+	sprintf(inPath2, "../pprocess/output_rapp/pp_%i-last.dat", zone+158+1);
+	filein2.open(inPath2, fstream::in);
+	if(!filein2){
+		cout<<"Error opening input file2"<<endl;
+		return -1;
+	}
+/*
+	//ouput file
+	sprintf(outPath1, "/evtdata/spyrou-sim/network_calculations/simon/pprocess/results/pp_X_Z_A_z%i.dat",zone+158);
+	fileout1.open(outPath1, fstream::out  | fstream::trunc);
+	if(!fileout1){
+		cout<<"Error opening output file1"<<endl;
+		return -1;
+	}
+*/
+	cout << "Processing zone: " << zone+158 << endl;
+
+	//read the input file into MassFrac array
+	//skip the header
+	for (int i=0;i<4;i++){
+		getline(filein1,line);
+	}
+	//get data
+	while(!filein1.eof()){
+		filein1 >> nuc_z >> nuc_a >> nuc_x >> nuc_dx;
+		MassFrac1[nuc_z][nuc_a]=nuc_x * nuc_a; //calculate the mass fraction and put it in the table
+	}
+	//skip the header
+	for (int i=0;i<4;i++){
+		getline(filein2,line);
+	}
+	//get data
+	while(!filein2.eof()){
+		filein2 >> nuc_z >> nuc_a >> nuc_x >> nuc_dx;
+		MassFrac2[nuc_z][nuc_a]=nuc_x * nuc_a; //calculate the mass fraction and put it in the table
+	}
+
+
+	//add the current zone to the final abundance array wMassFrac
+	for (int i=0; i<85; i++){
+		for(int j=0;j<211;j++){
+			// sum of all the mass fractions of given nuc_z and nuc_a from all layers weighted by the layers masses
+			wMassFrac[i][j] = wMassFrac[i][j] + 0.5 * ((MassFrac2[i][j]+MassFrac1[i][j])*(LayerM[zone+1] - LayerM[zone]));
+			// in case something weird was produced
+ 			if(wMassFrac[i][j]<0 || wMassFrac[i][j]>1){
+				cout << i << " " << j << " " << wMassFrac[i][j] << endl;			
+			}
+		}
+	}
+
+	//-----------------------------------------------divide the wMassFrac by total star mass to get mass fractions rather than masses
+	for (int AA=0; AA<211; AA++){
+		for(int ZZ=0;ZZ<85;ZZ++){
+			wMassFrac[ZZ][AA] = wMassFrac[ZZ][AA] / StarMass;
+		}
+	}
+
+	//sum all nuclides mass fraction for A equal to the mass of the p-nuclei and Z smaller than for the p-nuclei (beta decay)
+	for(int ZZ=34;ZZ<81;ZZ++){
+		for (int AA=0; AA<211; AA++){
+			if (Pnucl[ZZ][AA]!=0){
+				for (int i=81;i>=ZZ;i--){
+					PnuclMF[ZZ][AA]=PnuclMF[ZZ][AA]+wMassFrac[i][AA];
+				}
+//			cout << ZZ << " " << AA << " " << PnuclMF[ZZ][AA] <<endl;
+			}
+		}
+	}
+	// the two nuclei that are shielded from beta decay by other p-nuclei of the same mass don't change:
+	PnuclMF[73][180]=wMassFrac[73][180];
+	PnuclMF[57][138]=wMassFrac[57][138];
+
+
+	//-------------------------------------------------------------------------------------------------------write results into files
+/*
+	// write only non-zero values (most of the array is empty) 
+	// loop truncated as the code goes up to Z<85 only
+	for (int i=0; i<85;i ++){
+		for (int j=0; j<211; j++){
+			if(PnuclMF[i][j]!=0){
+			fileout1 << i << " " << j << " " << PnuclMF[i][j] << endl;	
+//			cout << i << " " << j << " " << PnuclMF[i][j] << endl;
+			}
+		}
+	}
+*/
+	fileout2 << zone <<  " ";
+	for (int i=0; i<85;i ++){
+		for (int j=0; j<211; j++){
+			if(Pnucl[i][j]!=0){
+			fileout2 << PnuclMF[i][j] << " ";	
+//			cout << i << " " << j << " " << PnuclMF[i][j] << endl;
+			}
+		}
+	}
+	fileout2 << endl;
+
+	filein1.close();
+	filein2.close();
+	fileout1.close();
+}
+	filein3.close();
+	fileout2.close();
+cout << "Done. Check output files." << endl;
+
+
+}

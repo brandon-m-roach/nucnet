@@ -1,0 +1,38 @@
+Running network calculations with a flag: rapp
+Start time: 09.05.16_21:56:53
+Running zone 158
+./run_single_zone rapp_final_net.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory158 outputs_Sept5/pp_zone158-rapp.xml
+Running zone 159
+./run_single_zone rapp_final_net.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory159 outputs_Sept5/pp_zone159-rapp.xml
+Step finished at: 09.05.16_22:48:00
+Running zone 160
+./run_single_zone rapp_final_net.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory160 outputs_Sept5/pp_zone160-rapp.xml
+Running zone 161
+./run_single_zone rapp_final_net.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory161 outputs_Sept5/pp_zone161-rapp.xml
+Step finished at: 09.05.16_23:35:39
+Running zone 162
+./run_single_zone rapp_final_net.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory162 outputs_Sept5/pp_zone162-rapp.xml
+Running zone 163
+./run_single_zone rapp_final_net.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory163 outputs_Sept5/pp_zone163-rapp.xml
+Step finished at: 09.06.16_00:19:29
+Running zone 164
+./run_single_zone rapp_final_net.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory164 outputs_Sept5/pp_zone164-rapp.xml
+Running zone 165
+./run_single_zone rapp_final_net.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory165 outputs_Sept5/pp_zone165-rapp.xml
+Step finished at: 09.06.16_00:44:04
+Running zone 166
+./run_single_zone rapp_final_net.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory166 outputs_Sept5/pp_zone166-rapp.xml
+Running zone 167
+./run_single_zone rapp_final_net.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory167 outputs_Sept5/pp_zone167-rapp.xml
+Step finished at: 09.06.16_01:06:52
+Running zone 168
+./run_single_zone rapp_final_net.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory168 outputs_Sept5/pp_zone168-rapp.xml
+Running zone 169
+./run_single_zone rapp_final_net.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory169 outputs_Sept5/pp_zone169-rapp.xml
+Step finished at: 09.06.16_01:26:58
+Running zone 170
+./run_single_zone rapp_final_net.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory170 outputs_Sept5/pp_zone170-rapp.xml
+Running zone 171
+./run_single_zone rapp_final_net.xml pp_reaclib_MF_properties.xml network_trajectories/zonetrajectory171 outputs_Sept5/pp_zone171-rapp.xml
+Step finished at: 09.06.16_01:48:12
+Calculations finished at: 09.06.16_01:48:12

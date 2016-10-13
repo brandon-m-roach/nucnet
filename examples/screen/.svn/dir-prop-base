@@ -1,0 +1,10 @@
+K 10
+svn:ignore
+V 117
+compare_screened_rates_in_zones
+compute_reverse_ratio_correction_in_zones
+compute_screening_factors_in_zones
+*.dSYM
+
+
+END

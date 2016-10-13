@@ -1,0 +1,18 @@
+K 10
+svn:ignore
+V 247
+compute_sdot
+compute_density_from_entropy
+compute_temperature_from_entropy
+compute_energy_generation_rate
+out
+*.exe
+*.xml
+*.dSYM
+*.txt
+compute_sound_speed
+compute_thermo_quantity
+compute_energy_generation_rate_by_reaction
+compute_sdot_by_reaction
+
+END

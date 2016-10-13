@@ -1,0 +1,32 @@
+K 10
+svn:ignore
+V 575
+print_weak_rate_vs_t9
+print_weak_rate_vs_rhoe
+print_log_ft
+out
+print_log_ft
+print_weak_approximate_rates
+print_weak_rates
+weak_xml_from_text
+weak_xml_from_text_with_nu
+compute_yedot
+print_weak_forward_and_reverse
+forward_and_reverse_for_reaction
+compute_dynamic_wse
+compute_yedot_vs_ye
+compute_equil_yedot
+approximate_forward_and_reverse_for_reaction
+print_approximate_neutrino_entropy_loss_rates
+print_neutrino_energy_flows
+print_neutrino_entropy_loss_rates
+print_average_neutrino_energy
+print_weak_approximate_average_neutrino_energies
+*.exe
+*.dSYM
+*.rsp
+*.pro
+*.txt
+*.dat
+
+END

@@ -1,0 +1,13 @@
+K 10
+svn:ignore
+V 69
+out
+test
+xml
+*.xml
+*.dat
+*.dSYM
+nuclide_converter
+reaction_converter
+
+END

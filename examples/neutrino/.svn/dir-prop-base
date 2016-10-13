@@ -1,0 +1,10 @@
+K 10
+svn:ignore
+V 65
+*.exe
+*.dSYM
+print_neutrino_rates
+print_neutrino_cross_sections
+
+
+END

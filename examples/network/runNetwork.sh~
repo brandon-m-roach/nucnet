@@ -1,0 +1,57 @@
+# script to loop over all the zones for the pprocess and run the network code in each zone
+
+
+zone_num=158
+flag="rapp_revised_Oct12"
+
+network="rapp_final_net.xml"
+#network="pp_reaclib_full.xml"
+input_file="pp_reaclib_MF_properties.xml"
+
+echo "Running network calculations with a flag: $flag"
+echo "Start time: $(date +"%m.%d.%y_%H:%M:%S")"
+
+while [ $zone_num -le 159 ]; do 
+        export NNT_HYDRO_CODE=traj
+	export WN_XML_CHAR=char
+	module load boost/1.58
+	module load gcc
+	module load gsl
+
+#----core 0
+	zone_file="network_trajectories/zonetrajectory$zone_num"
+	output_file="outputs_Oct1/pp_zone$zone_num-$flag.xml"
+
+	echo "Running zone $zone_num"
+	echo "./run_single_zone $network $input_file $zone_file $output_file" 
+	./run_single_zone $network $input_file $zone_file $output_file 1> outputs_Oct1/pp_zone$zone_num-$flag 2> outputs_Oct12/pp_zone$zone_num-$flag-error &
+
+#----core 1
+	let zone_num=zone_num+1
+
+	zone_file="network_trajectories/zonetrajectory$zone_num"
+	output_file="outputs_Oct1/pp_zone$zone_num-$flag.xml"
+
+	echo "Running zone $zone_num"
+	echo "./run_single_zone $network $input_file $zone_file $output_file" 
+	./run_single_zone $network $input_file $zone_file $output_file 1> outputs_Oct1/pp_zone$zone_num-$flag 2> outputs_Oct12/pp_zone$zone_num-$flag-error &
+
+#----core 2
+#	let zone_num=zone_num+1
+
+#	zone_file="/home/asimon3/network_code/pprocess/network_trajectories/zonetrajectory$zone_num"
+#	output_file="/home/asimon3/network_code/pprocess/outputs/pp_zone$zone_num-$flag.xml"
+
+#	echo "Running zone $zone_num"
+#	echo "./run_single_zone $network $input_file $zone_file $output_file" 
+#	./run_single_zone $network $input_file $zone_file $output_file 1> /home/asimon3/network_code/pprocess/outputs/pp_zone$zone_num-$flag 2> /home/asimon3/network_code/pprocess/outputs/pp_zone$zone_num-$flag-error &
+
+	let zone_num=zone_num+1
+
+	wait
+
+echo "Step finished at: $(date +"%m.%d.%y_%H:%M:%S")"
+
+done
+
+echo "Calculations finished at: $(date +"%m.%d.%y_%H:%M:%S")"

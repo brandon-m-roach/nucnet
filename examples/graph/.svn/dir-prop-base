@@ -1,0 +1,21 @@
+K 10
+svn:ignore
+V 159
+net_view_graph
+zone_flow_graph
+dot_files
+pdf_files
+zone_current_graph
+zone_abundance_graph
+zone_mu_graph
+out*
+*.pdf
+*.aux
+*.log
+*.dot
+*.tex
+*.exe
+*.xml
+*.dSYM
+
+END

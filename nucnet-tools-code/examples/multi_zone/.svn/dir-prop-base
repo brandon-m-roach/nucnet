@@ -1,0 +1,11 @@
+K 10
+svn:ignore
+V 63
+exp_multi_mass
+multi_mass
+multi_zone_network
+*.xml
+*.h5
+*.dSYM
+
+END

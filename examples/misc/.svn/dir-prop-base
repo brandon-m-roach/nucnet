@@ -1,0 +1,34 @@
+K 10
+svn:ignore
+V 413
+out*
+*.txt
+*.xml
+*.exe
+*.tex
+*.dSYM
+apply_nuc_xpath
+create_zone_xml_from_text
+create_multi_zone_xml_from_text
+create_equil_zones_from_network
+compare_reaction_files_at_t9
+select_network
+extract_zones_to_xml
+diff_current
+add_properties_to_zone_xml
+print_rates_by_xpath
+compute_separation_energies
+merge_nuc
+test_versions
+reactions_latex
+extend_partf
+update_mass_excesses_from_text
+Qvalue_sign_change
+one_time_step
+
+K 10
+svn:ingore
+V 26
+create_zone_xml_from_text
+
+END

@@ -1,0 +1,34 @@
+K 10
+svn:ignore
+V 83
+html
+obj
+vendor
+latex
+data_pub
+libnucnet
+libnuceq
+my_projects
+my_user
+my_examples
+
+
+K 13
+svn:mergeinfo
+V 469
+/branches/base-branch:378-395
+/branches/cast_branch:73-98
+/branches/env_branch:174-182
+/branches/hdf5_test:240-280
+/branches/ilu_branch:294-295
+/branches/multi_zone:300-317
+/branches/multi_zone_bind:310-312
+/branches/multi_zone_parallel:344-367
+/branches/new-screening-branch:471-474
+/branches/new_graph:320-325
+/branches/program_options:438-444
+/branches/screening-branch:453-468
+/branches/sparse:149-163
+/branches/string-branch:388-420
+/branches/thermo_branch:284-285
+END
