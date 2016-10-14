@@ -1,0 +1,14 @@
+rapp_rates_unedited/reac1237.dat
+rapp_rates_unedited/reac1257.dat
+rapp_rates_unedited/reac1275.dat
+rapp_rates_unedited/reac1276.dat
+rapp_rates_unedited/reac1277.dat
+rapp_rates_unedited/reac1278.dat
+rapp_rates_unedited/reac1297.dat
+rapp_rates_unedited/reac1316.dat
+rapp_rates_unedited/reac1317.dat
+rapp_rates_unedited/reac1318.dat
+rapp_rates_unedited/reac1319.dat
+rapp_rates_unedited/reac555.dat
+rapp_rates_unedited/reac627.dat
+rapp_rates_unedited/reac796.dat
