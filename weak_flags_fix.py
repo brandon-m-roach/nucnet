@@ -45,7 +45,7 @@ for i in range(1,62506): #files are [reac1.dat, reac62505.dat]
                 fout.write(line.replace(r'bex+ ', r'bex+w'))
             
             elif r'      mo92      ' in line: #6 spaces before and behind
-                fout.write(line.replace(r'm092 ',r'mo92w'))
+                fout.write(line.replace(r'mo92 ',r'mo92w'))
             
             elif r'mo03' in line:
                 fout.write(line.repalce(r'mo03 ',r'mo03w'))
