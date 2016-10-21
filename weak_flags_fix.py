@@ -36,7 +36,7 @@ for i in range(1,62506): #files are [reac1.dat, reac62505.dat]
                 fout.write(line.replace(r' ec ', r' ecw'))
                                 
             elif r' bec ' in line:
-                fout.write(line.replace(r' bec ', r'becw'))
+                fout.write(line.replace(r' bec ', r' becw'))
                                     
             elif r'bhi+' in line:
                 fout.write(line.replace(r'bhi+ ', r'bhi+w'))
