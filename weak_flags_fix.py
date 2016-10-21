@@ -49,6 +49,10 @@ for i in range(1,62506): #files are [reac1.dat, reac62505.dat]
             
             elif r'mo03' in line:
                 fout.write(line.repalce(r'mo03 ',r'mo03w'))
+
+
+            else:
+                fout.write(line) #if there was nothing to replace, re-write it
         
         else: #if we weren't on the second line, just re-write the original line
             fout.write(line)
