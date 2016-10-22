@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reaction_data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://libnucnet.sourceforge.net/xsd_pub/2014-12-13/libnucnet__reac/ http://libnucnet.sourceforge.net/xsd_pub/2014-12-13/libnucnet__reac.xsd">
+  <!--h1 + pd90 -> h1 + he4 + ru86-->
+  <reaction>
+    <source>rapp</source>
+    <reactant>h1</reactant>
+    <reactant>pd90</reactant>
+    <product>h1</product>
+    <product>he4</product>
+    <product>ru86</product>
+    <non_smoker_fit>
+      <fit note="e">
+        <spint>0</spint>
+        <spinf>0</spinf>
+        <TlowHf>0.01</TlowHf>
+        <Tlowfit>0.01</Tlowfit>
+        <Thighfit>10</Thighfit>
+        <acc>0</acc>
+        <a1>164.94</a1>
+        <a2>-35.6405</a2>
+        <a3>-506.606</a3>
+        <a4>279.206</a4>
+        <a5>-10.1821</a5>
+        <a6>0.379088</a6>
+        <a7>-190.983</a7>
+        <a8>0</a8>
+      </fit>
+    </non_smoker_fit>
+  </reaction>
+</reaction_data>

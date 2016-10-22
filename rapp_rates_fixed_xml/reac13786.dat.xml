@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reaction_data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://libnucnet.sourceforge.net/xsd_pub/2014-12-13/libnucnet__reac/ http://libnucnet.sourceforge.net/xsd_pub/2014-12-13/libnucnet__reac.xsd">
+  <!--ta199 + gamma -> n + ta198-->
+  <reaction>
+    <source>rapp</source>
+    <reactant>ta199</reactant>
+    <reactant>gamma</reactant>
+    <product>n</product>
+    <product>ta198</product>
+    <non_smoker_fit>
+      <fit note="r">
+        <spint>0</spint>
+        <spinf>0</spinf>
+        <TlowHf>0.01</TlowHf>
+        <Tlowfit>0.01</Tlowfit>
+        <Thighfit>10</Thighfit>
+        <acc>0</acc>
+        <a1>70.7041</a1>
+        <a2>-58.34</a2>
+        <a3>12.287</a3>
+        <a4>-48.6038</a4>
+        <a5>4.38004</a5>
+        <a6>-0.463379</a6>
+        <a7>17.4147</a7>
+        <a8>0</a8>
+      </fit>
+    </non_smoker_fit>
+  </reaction>
+</reaction_data>

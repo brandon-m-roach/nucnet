@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reaction_data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://libnucnet.sourceforge.net/xsd_pub/2014-12-13/libnucnet__reac/ http://libnucnet.sourceforge.net/xsd_pub/2014-12-13/libnucnet__reac.xsd">
+  <!--cu68 -> zn68 + electron + anti-neutrino_e-->
+  <reaction>
+    <source>rapp</source>
+    <reactant>cu68</reactant>
+    <product>zn68</product>
+    <product>electron</product>
+    <product>anti-neutrino_e</product>
+    <non_smoker_fit>
+      <fit note="w">
+        <spint>0</spint>
+        <spinf>0</spinf>
+        <TlowHf>0.01</TlowHf>
+        <Tlowfit>0.01</Tlowfit>
+        <Thighfit>10</Thighfit>
+        <acc>0</acc>
+        <a1>-8.27683</a1>
+        <a2>0.00294075</a2>
+        <a3>-1.04939</a3>
+        <a4>6.5464</a4>
+        <a5>-1.07242</a5>
+        <a6>0.0948548</a6>
+        <a7>-1.65158</a7>
+        <a8>0</a8>
+      </fit>
+    </non_smoker_fit>
+  </reaction>
+</reaction_data>

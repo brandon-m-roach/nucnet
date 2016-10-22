@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reaction_data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://libnucnet.sourceforge.net/xsd_pub/2014-12-13/libnucnet__reac/ http://libnucnet.sourceforge.net/xsd_pub/2014-12-13/libnucnet__reac.xsd">
+  <!--se79 -> br79 + electron + anti-neutrino_e-->
+  <reaction>
+    <source>rapp</source>
+    <reactant>se79</reactant>
+    <product>br79</product>
+    <product>electron</product>
+    <product>anti-neutrino_e</product>
+    <single_rate>3.38146e-13</single_rate>
+  </reaction>
+</reaction_data>

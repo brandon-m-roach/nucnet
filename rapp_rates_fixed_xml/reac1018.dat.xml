@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reaction_data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://libnucnet.sourceforge.net/xsd_pub/2014-12-13/libnucnet__reac/ http://libnucnet.sourceforge.net/xsd_pub/2014-12-13/libnucnet__reac.xsd">
+  <!--nb79 -> zr79 + positron + neutrino_e-->
+  <reaction>
+    <source>rapp</source>
+    <reactant>nb79</reactant>
+    <product>zr79</product>
+    <product>positron</product>
+    <product>neutrino_e</product>
+    <single_rate>19.4159</single_rate>
+  </reaction>
+</reaction_data>

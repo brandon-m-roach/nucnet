@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reaction_data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://libnucnet.sourceforge.net/xsd_pub/2014-12-13/libnucnet__reac/ http://libnucnet.sourceforge.net/xsd_pub/2014-12-13/libnucnet__reac.xsd">
+  <!--i119 -> te119 + positron + neutrino_e-->
+  <reaction>
+    <source>rapp</source>
+    <reactant>i119</reactant>
+    <product>te119</product>
+    <product>positron</product>
+    <product>neutrino_e</product>
+    <single_rate>0.000604838</single_rate>
+  </reaction>
+</reaction_data>

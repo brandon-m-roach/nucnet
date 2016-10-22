@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reaction_data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://libnucnet.sourceforge.net/xsd_pub/2014-12-13/libnucnet__reac/ http://libnucnet.sourceforge.net/xsd_pub/2014-12-13/libnucnet__reac.xsd">
+  <!--s47 -> n + n + cl45 + electron + anti-neutrino_e-->
+  <reaction>
+    <source>rapp</source>
+    <reactant>s47</reactant>
+    <product>n</product>
+    <product>n</product>
+    <product>cl45</product>
+    <product>electron</product>
+    <product>anti-neutrino_e</product>
+    <single_rate>3.37373</single_rate>
+  </reaction>
+</reaction_data>

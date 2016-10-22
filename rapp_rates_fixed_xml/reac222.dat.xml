@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reaction_data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://libnucnet.sourceforge.net/xsd_pub/2014-12-13/libnucnet__reac/ http://libnucnet.sourceforge.net/xsd_pub/2014-12-13/libnucnet__reac.xsd">
+  <!--k38 -> ar38 + positron + neutrino_e-->
+  <reaction>
+    <source>rapp</source>
+    <reactant>k38</reactant>
+    <product>ar38</product>
+    <product>positron</product>
+    <product>neutrino_e</product>
+    <non_smoker_fit>
+      <fit note="w">
+        <spint>0</spint>
+        <spinf>0</spinf>
+        <TlowHf>0.01</TlowHf>
+        <Tlowfit>0.01</Tlowfit>
+        <Thighfit>10</Thighfit>
+        <acc>0</acc>
+        <a1>-54.859</a1>
+        <a2>0.0224422</a2>
+        <a3>-9.09499</a3>
+        <a4>68.816</a4>
+        <a5>-9.70121</a5>
+        <a6>0.929669</a6>
+        <a7>-15.9249</a7>
+        <a8>0</a8>
+      </fit>
+    </non_smoker_fit>
+  </reaction>
+</reaction_data>
