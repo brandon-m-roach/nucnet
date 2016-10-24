@@ -2,10 +2,9 @@
 
 
 zone_num=158
-flag="rapp_revised_Oct12"
+flag="rapp_revised_Oct23"
 
-network="rapp_final_net_original.xml"
-#network="pp_reaclib_full.xml"
+network="rapp_final_net.xml"
 input_file="pp_reaclib_MF_properties.xml"
 
 echo "Running network calculations with a flag: $flag"
@@ -20,21 +19,21 @@ while [ $zone_num -le 159 ]; do
 
 #----core 0
 	zone_file="network_trajectories/zonetrajectory$zone_num"
-	output_file="outputs_Oct1/pp_zone$zone_num-$flag.xml"
+	output_file="outputs_Oct23/pp_zone$zone_num-$flag.xml"
 
 	echo "Running zone $zone_num"
 	echo "./run_single_zone $network $input_file $zone_file $output_file" 
-	./run_single_zone $network $input_file $zone_file $output_file 1> outputs_Oct1/pp_zone$zone_num-$flag 2> outputs_Oct12/pp_zone$zone_num-$flag-error &
+	./run_single_zone $network $input_file $zone_file $output_file 1> outputs_Oct23/pp_zone$zone_num-$flag 2> outputs_Oct23/pp_zone$zone_num-$flag-error &
 
 #----core 1
 	let zone_num=zone_num+1
 
 	zone_file="network_trajectories/zonetrajectory$zone_num"
-	output_file="outputs_Oct1/pp_zone$zone_num-$flag.xml"
+	output_file="outputs_Oct23/pp_zone$zone_num-$flag.xml"
 
 	echo "Running zone $zone_num"
 	echo "./run_single_zone $network $input_file $zone_file $output_file" 
-	./run_single_zone $network $input_file $zone_file $output_file 1> outputs_Oct1/pp_zone$zone_num-$flag 2> outputs_Oct12/pp_zone$zone_num-$flag-error &
+	./run_single_zone $network $input_file $zone_file $output_file 1> outputs_Oct23/pp_zone$zone_num-$flag 2> outputs_Oct23/pp_zone$zone_num-$flag-error &
 
 #----core 2
 #	let zone_num=zone_num+1
