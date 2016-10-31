@@ -10,12 +10,12 @@ input_file="pp_reaclib_MF_properties.xml"
 echo "Running network calculations with a flag: $flag"
 echo "Start time: $(date +"%m.%d.%y_%H:%M:%S")"
 
-while [ $zone_num -le 159 ]; do 
+while [ $zone_num -le 171 ]; do 
         export NNT_HYDRO_CODE=traj
 	export WN_XML_CHAR=char
-	module load boost/1.58
-	module load gcc
-	module load gsl
+	#module load boost/1.58
+	#module load gcc
+	#module load gsl
 
 #----core 0
 	zone_file="network_trajectories/zonetrajectory$zone_num"
@@ -26,14 +26,14 @@ while [ $zone_num -le 159 ]; do
 	./run_single_zone $network $input_file $zone_file $output_file 1> outputs_Oct23/pp_zone$zone_num-$flag 2> outputs_Oct23/pp_zone$zone_num-$flag-error &
 
 #----core 1
-	let zone_num=zone_num+1
+	#let zone_num=zone_num+1
 
-	zone_file="network_trajectories/zonetrajectory$zone_num"
-	output_file="outputs_Oct23/pp_zone$zone_num-$flag.xml"
+	#zone_file="network_trajectories/zonetrajectory$zone_num"
+	#output_file="outputs_Oct23/pp_zone$zone_num-$flag.xml"
 
-	echo "Running zone $zone_num"
-	echo "./run_single_zone $network $input_file $zone_file $output_file" 
-	./run_single_zone $network $input_file $zone_file $output_file 1> outputs_Oct23/pp_zone$zone_num-$flag 2> outputs_Oct23/pp_zone$zone_num-$flag-error &
+	#echo "Running zone $zone_num"
+	#echo "./run_single_zone $network $input_file $zone_file $output_file" 
+	#./run_single_zone $network $input_file $zone_file $output_file 1> outputs_Oct23/pp_zone$zone_num-$flag 2> outputs_Oct23/pp_zone$zone_num-$flag-error &
 
 #----core 2
 #	let zone_num=zone_num+1

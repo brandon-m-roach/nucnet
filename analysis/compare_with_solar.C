@@ -26,13 +26,13 @@ char inPath1[200], inPath2[200], outPath[200];
 fstream filein1, filein2, fileout;
 
 // input files
-sprintf(inPath1, "../pprocess/output_rapp_fixed/pp_X_Z_A.dat");
+sprintf(inPath1, "../pprocess/output_rapp_fixed_Oct23/pp_X_Z_A.dat");
 filein1.open(inPath1, fstream::in);
 if(!filein1){
 	cout<<"Error opening input file1"<<endl;
 	return -1;
 }
-sprintf(inPath2, "../pprocess/output_rapp_fixed/solar_massfrac.dat");
+sprintf(inPath2, "../pprocess/output_rapp_fixed_Oct23/solar_massfrac.dat");
 filein2.open(inPath2, fstream::in);
 if(!filein2){
 	cout<<"Error opening input file2"<<endl;
@@ -40,7 +40,7 @@ if(!filein2){
 }
 
 // output file
-sprintf(outPath, "../pprocess/output_rapp_fixed/ratio_to_solar.dat");
+sprintf(outPath, "../pprocess/output_rapp_fixed_Oct23/ratio_to_solar.dat");
 fileout.open(outPath, fstream::out  | fstream::trunc);
 if(!fileout){
 	cout<<"Error opening output file"<<endl;

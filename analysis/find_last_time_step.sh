@@ -7,7 +7,7 @@ zone_num=158
 while [ $zone_num -le 171 ]
 do 
 echo $zone_num
-cd ../pprocess/output_rapp_fixed/zone$zone_num
+cd ../pprocess/output_rapp_fixed_Oct23/zone$zone_num
 pwd
 filename=$(ls -rt | tail -1)
 echo ${filename}

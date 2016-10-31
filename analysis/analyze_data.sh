@@ -2,9 +2,9 @@ zonenum=158
 tag='rapp_revised'
 while [ $zonenum -le 171 ]
 do
-mkdir ../pprocess/output_rapp_fixed/zone$zonenum
+mkdir ../pprocess/output_rapp_fixed_Oct23/zone$zonenum
 echo "------------------------> Processing zone: $zonenum"
-./extract_time_steps ../examples/network/outputs_Oct1/pp_zone$zonenum-$tag $zonenum
+./extract_time_steps ../examples/network/outputs_Oct23/pp_zone$zonenum-$tag $zonenum
 zonenum=$(($zonenum+1))
 done
 echo "find the last time step"
