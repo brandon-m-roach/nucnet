@@ -61,7 +61,7 @@ int main(int argc, char* argv[])
 					found=line.find("t =");
 					if(found==0){	// if it has time data
 						//open ouput file
-						sprintf(outPath, "../pprocess/output_rapp_fixed_Oct23/zone%i/pp_zone_%i_%i.dat", zone, zone, step);
+						sprintf(outPath, "../pprocess/outputs_Nov9/zone%i/pp_zone_%i_%i.dat", zone, zone, step);
 						step++; //increment step # for the next file
 						fileout.open(outPath, fstream::out  | fstream::trunc);
 						if(!fileout){

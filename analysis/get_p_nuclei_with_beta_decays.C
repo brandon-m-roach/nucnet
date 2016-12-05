@@ -32,19 +32,19 @@ char inPath1[200], inPath2[200], inPath3[200], outPath1[200], outPath2[200];
 fstream filein1, filein2, filein3, fileout1, fileout2;
 
 //input files
-sprintf(inPath1, "../pprocess/output_rapp_fixed/pp_X_Z_A.dat");
+sprintf(inPath1, "../pprocess/outputs_Nov9/pp_X_Z_A.dat");
 filein1.open(inPath1, fstream::in);
 if(!filein1){
 	cout<<"Error opening input file1"<<endl;
 	return -1;
 }
-sprintf(inPath2, "../pprocess/output_rapp_fixed/solar_massfrac.dat");
+sprintf(inPath2, "../pprocess/outputs_Nov9/solar_massfrac.dat");
 filein2.open(inPath2, fstream::in);
 if(!filein2){
 	cout<<"Error opening input file2"<<endl;
 	return -1;
 }
-sprintf(inPath3, "../pprocess/output_rapp_fixed/p_nuclei.dat");
+sprintf(inPath3, "../pprocess/outputs_Nov9/p_nuclei.dat");
 filein3.open(inPath3, fstream::in);
 if(!filein3){
 	cout<<"Error opening input file3"<<endl;
@@ -52,7 +52,7 @@ if(!filein3){
 }
 
 //output file
-sprintf(outPath1, "../pprocess/output_rapp_fixed/pnuclei_X_vs_solar_beta_decayed.dat");
+sprintf(outPath1, "../pprocess/outputs_Nov9/pnuclei_X_vs_solar_beta_decayed.dat");
 fileout1.open(outPath1, fstream::out  | fstream::trunc);
 if(!fileout1){
 	cout<<"Error opening output file"<<endl;

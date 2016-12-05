@@ -7,12 +7,13 @@ zone_num=158
 while [ $zone_num -le 171 ]
 do 
 echo $zone_num
-cd ../pprocess/output_rapp_fixed_Oct23/zone$zone_num
+cd ../pprocess/outputs_Nov9/zone$zone_num
 pwd
 filename=$(ls -rt | tail -1)
 echo ${filename}
-cp $filename ../../output_rapp_fixed/pp_$zone_num-last.dat
-echo "../../pprocess/output_rapp/zone$zone_num/$filename copied to ../pprocess/output_rapp/pp_$zone_num-last.dat"
+cp $filename ../../outputs_Nov9/pp_$zone_num-last.dat
+echo "../../pprocess/outputs_Nov9/zone$zone_num/$filename copied to ../pprocess/outputs_Nov9/pp_$zone_num-last.dat"
 let zone_num=zone_num+1
-cd /afs/crc.nd.edu/user/b/broach1/nucnet-tools-code/analysis
+cd /home/brandon/nucnet/nucnet/analysis
+#cd /afs/crc.nd.edu/user/b/broach1/nucnet-tools-code/analysis
 done

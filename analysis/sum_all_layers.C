@@ -44,13 +44,13 @@ StarMass = LayerM[13]-LayerM[0];
 
 
 //ouput files
-sprintf(outPath1, "../pprocess/output_rapp_fixed/pp_X_Z_A.dat");
+sprintf(outPath1, "../pprocess/outputs_Nov9/pp_X_Z_A.dat");
 fileout1.open(outPath1, fstream::out  | fstream::trunc);
 if(!fileout1){
 	cout<<"Error opening output file1"<<endl;
 	return -1;
 }
-sprintf(outPath2, "../pprocess/output_rapp_fixed/pp_X_A.dat");
+sprintf(outPath2, "../pprocess/outputs_Nov9/pp_X_A.dat");
 fileout2.open(outPath2, fstream::out  | fstream::trunc);
 if(!fileout2){
 	cout<<"Error opening output file2"<<endl;
@@ -71,13 +71,13 @@ for(zone=0; zone<13; zone++){
 	}
 
 	//input files
-	sprintf(inPath1, "../pprocess/output_rapp_fixed/pp_%i-last.dat", zone+158);
+	sprintf(inPath1, "../pprocess/outputs_Nov9/pp_%i-last.dat", zone+158);
 	filein1.open(inPath1, fstream::in);
 	if(!filein1){
 		cout<<"Error opening input file1"<<endl;
 		return -1;
 	}
-	sprintf(inPath2, "../pprocess/output_rapp_fixed/pp_%i-last.dat", zone+158+1);
+	sprintf(inPath2, "../pprocess/outputs_Nov9/pp_%i-last.dat", zone+158+1);
 	filein2.open(inPath2, fstream::in);
 	if(!filein2){
 		cout<<"Error opening input file2"<<endl;

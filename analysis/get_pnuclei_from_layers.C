@@ -37,7 +37,7 @@ fstream filein1, filein2, filein3, fileout1, fileout2;
 StarMass = LayerM[13]-LayerM[0];
 
 
-sprintf(inPath3, "../pprocess/output_rapp_fixed/p_nuclei.dat");
+sprintf(inPath3, "../pprocess/outputs_Nov9/p_nuclei.dat");
 filein3.open(inPath3, fstream::in);
 if(!filein3){
 	cout<<"Error opening input file3"<<endl;
@@ -51,7 +51,7 @@ if(!filein3){
 	cout << "Loaded list of p-nuclei" << endl;
 
 //ouput file
-sprintf(outPath2, "../pprocess/output_rapp_fixed/pnucl_in_layers.dat");
+sprintf(outPath2, "../pprocess/outputs_Nov9/pnucl_in_layers.dat");
 fileout2.open(outPath2, fstream::out  | fstream::trunc);
 if(!fileout2){
 	cout<<"Error opening output file1"<<endl;
@@ -72,13 +72,13 @@ for(zone=0; zone<13; zone++){
 	}
 
 	//input files
-	sprintf(inPath1, "../pprocess/output_rapp_fixed/pp_%i-last.dat", zone+158);
+	sprintf(inPath1, "../pprocess/outputs_Nov9/pp_%i-last.dat", zone+158);
 	filein1.open(inPath1, fstream::in);
 	if(!filein1){
 		cout<<"Error opening input file1"<<endl;
 		return -1;
 	}
-	sprintf(inPath2, "../pprocess/output_rapp_fixed/pp_%i-last.dat", zone+158+1);
+	sprintf(inPath2, "../pprocess/outputs_Nov9/pp_%i-last.dat", zone+158+1);
 	filein2.open(inPath2, fstream::in);
 	if(!filein2){
 		cout<<"Error opening input file2"<<endl;

@@ -77,6 +77,7 @@ JINA_XML_OBJS = $(WN_OBJ)           	\
 
 JINA_XML_EXEC = nuclide_converter       \
                 reaction_converter      \
+		remove_dup_rapp_reactions \
 
 $(JINA_XML_EXEC): $(JINA_XML_OBJS)
 	$(CC) $(JINA_XML_OBJS) -o $(BINDIR)/$@ $@.cpp $(CLIBS)
